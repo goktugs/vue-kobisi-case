@@ -1,0 +1,99 @@
+[
+  {
+    "id": "5082579",
+    "name": "Apple Watch",
+    "color": "Series 5 SE",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "newPrice": "$ 529.99",
+    "oldPrice": "$ 429.99",
+    "image": "./images/Name=Watch.png"
+  },
+  {
+    "id": "5088790",
+    "name": "Sony ZX330BT",
+    "color": "Light Grey",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "newPrice": "$ 39.99",
+    "oldPrice": "$ 29.99",
+    "image": "./images/Name=Headphones.png"
+  },
+
+  {
+    "id": "5082586",
+    "name": "Iphone 11",
+    "color": "Serious Black",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "newPrice": "$ 619.99",
+    "oldPrice": "$ 529.99",
+    "image": "./images/Name=Iphone-12-01.png"
+  },
+
+  {
+    "id": "5082584",
+    "name": "Iphone 11",
+    "color": "Subway Blue",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "newPrice": "$ 619.99",
+    "oldPrice": "$ 529.99",
+    "image": "./images/Name=Iphone-12-02.png"
+  },
+
+  {
+    "id": "5095004",
+    "name": "Macbook Pro 16”",
+    "color": "Silver - M1 Pro",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "newPrice": "$ 3249.99",
+    "oldPrice": "$ 2249.99",
+    "image": "./images/Name=Macbook.png"
+  },
+  {
+    "id": "5082589",
+    "name": "Iphone 11",
+    "color": "Product RED",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "newPrice": "$ 619.99",
+    "oldPrice": "$ 529.99",
+    "image": "./images/Name=Iphone-12-03.png"
+  },
+
+  {
+    "id": "5082585",
+    "name": "Iphone 11",
+    "color": "Milky White",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "newPrice": "$ 619.99",
+    "oldPrice": "$ 529.99",
+    "image": "./images/Name=Iphone-12-04.png"
+  },
+
+  {
+    "id": "5082583",
+    "name": "Dell XPS 13",
+    "color": "White",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "newPrice": "$ 1799.99",
+    "oldPrice": "$ 1399.99",
+    "image": "./images/Name=Dell-XPS-13-White.png"
+  },
+
+  {
+    "id": "5088823",
+    "name": "Samsung S21 Pro",
+    "color": "Black",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "newPrice": "$ 799.99",
+    "oldPrice": "$ 599.99",
+    "image": "./images/Name=Samsung-S21-Pro.png"
+  },
+
+  {
+    "id": "5088817",
+    "name": "Samsung Note21 Bundle",
+    "color": "Pink-Blue",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "newPrice": "$ 1799.99",
+    "oldPrice": "$ 1299.99",
+    "image": "./images/Name=Samsung-Note21.png"
+  }
+]
