@@ -26,18 +26,46 @@ export default {
 </template>
 
 <style lang="scss" >
-.cardContainer {
-    height: 100%;
-    width: 100%;
-    overflow: auto;
+@media only screen and (min-width: 768px) {
+    .cardContainer {
+        height: 100%;
+        width: 100%;
 
-    &:nth-of-type(1) {
-        grid-area: 1 / 1 / span 2 / span 2;
+        &:nth-of-type(1) {
+            grid-area: 1 / 1 / span 2 / span 2;
+
+            img {
+                width: 40vh;
+            }
+        }
+
+        &:nth-of-type(10) {
+            grid-area: 3 / 3 / span 2 / span 2;
+
+            img {
+                width: 40vh;
+            }
+        }
     }
+}
 
-    &:nth-of-type(10) {
-        grid-row: 7/span 2;
-        grid-column: 1/span 2;
+@media only screen and (max-width: 768px) {
+
+    .cardContainer {
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+
+        &:nth-of-type(1) {
+            grid-area: 1 / 1 / span 2 / span 2;
+        }
+
+        &:nth-of-type(10) {
+            grid-row: 7/span 2;
+            grid-column: 1/span 2;
+        }
+
+
     }
 }
 </style>

@@ -39,76 +39,148 @@ export default {
 </template>
 
 <style lang="scss" >
-.cardItemContainer {
-    height: 100%;
-    width: 100%;
-    background-color: #F5F5F5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-        .containerBla .browseModalButton {
-            visibility: visible;
-        }
-    }
-
-    .containerBla {
-        position: relative;
+@media only screen and (min-width: 768px) {
+    .cardItemContainer {
+        height: 100%;
+        width: 100%;
+        background-color: #F5F5F5;
         display: flex;
-        flex-direction: column;
         align-items: center;
+        justify-content: center;
 
-        .productImage {
-            img {
-                max-width: 100%;
-                max-height: 100%;
+        &:hover {
+            .containerBla .browseModalButton {
+                visibility: visible;
             }
         }
 
-        .browseModalContainer {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            overflow: hidden;
-            visibility: hidden;
+        .containerBla {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-            .browseModalButton {
+            .browseModalContainer {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                overflow: hidden;
+                visibility: hidden;
+
+                .browseModalButton {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 8px 24px;
+                    gap: 8px;
+                    border: 1px solid #1A1F16;
+                    border-radius: 11px;
+                    background-color: transparent;
+                    color: #EDEDED;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #EDEDED;
+                        color: black;
+                    }
+                }
+            }
+
+            .productSpec {
                 display: flex;
-                flex-direction: row;
-                justify-content: center;
                 align-items: center;
-                padding: 8px 24px;
-                gap: 8px;
-                border: 1px solid #1A1F16;
-                border-radius: 11px;
-                background-color: transparent;
-                color: #EDEDED;
-                cursor: pointer;
+                justify-content: center;
+                flex-direction: column;
+                padding-bottom: 20px;
 
-                &:hover {
-                    background-color: #EDEDED;
-                    color: black;
+                h4 {
+                    font-size: 30px;
+                }
+
+                ins {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cardItemContainer {
+        height: 100%;
+        width: 100%;
+        background-color: #F5F5F5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            .containerBla .browseModalButton {
+                visibility: visible;
+            }
+        }
+
+        .containerBla {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .productImage {
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+
+            .browseModalContainer {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                overflow: hidden;
+                visibility: hidden;
+
+                .browseModalButton {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 8px 24px;
+                    gap: 8px;
+                    border: 1px solid #1A1F16;
+                    border-radius: 11px;
+                    background-color: transparent;
+                    color: #EDEDED;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #EDEDED;
+                        color: black;
+                    }
+                }
+            }
+
+            .productSpec {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding-bottom: 10px;
+
+                h4 {
+                    font-size: 16px;
+                }
+
+                ins {
+                    font-size: 10px;
                 }
             }
         }
 
-        .productSpec {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding-bottom: 10px;
 
-            h4 {
-                font-size: 16px;
-            }
-
-            ins {
-                font-size: 10px;
-            }
-        }
     }
 }
 </style>
