@@ -17,18 +17,25 @@ export default {
 
     data() {
         return {
-            newValue: 0
+            newValue: 0,
+            min: 0,
+            max: 10
         }
     },
     methods: {
         mpplus: function () {
-
-            this.newValue = this.newValue + 1;
+            if (this.newValue < this.max) {
+                this.newValue = this.newValue + 1;
+            } else {
+                alert("You cant add more than 10")
+            }
 
         },
         mpminus: function () {
+            if ((this.newValue) > this.min) {
+                this.newValue = this.newValue - 1;
+            }
 
-            this.newValue = this.newValue - 1;
 
         }
     },
@@ -46,7 +53,7 @@ export default {
 
 
 <style lang="scss">
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:1280px) {
     .addCounter {
         background: #1A1F16;
         padding: 8px 24px;
@@ -59,6 +66,8 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
+        border: 2px solid black;
+        border-right: none;
 
 
         .minus {
@@ -93,7 +102,7 @@ export default {
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
     .addCounter {
         background: #1A1F16;
         border-radius: 14px;
