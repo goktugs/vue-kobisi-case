@@ -38,7 +38,7 @@ export default {
 
 </template>
 
-<style lang="scss">
+<style lang="scss" >
 .cardItemContainer {
     height: 100%;
     width: 100%;
@@ -50,7 +50,6 @@ export default {
     &:hover {
         .containerBla .browseModalButton {
             visibility: visible;
-
         }
     }
 
@@ -60,7 +59,12 @@ export default {
         flex-direction: column;
         align-items: center;
 
-
+        .productImage {
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
 
         .browseModalContainer {
             position: absolute;
@@ -88,7 +92,6 @@ export default {
                     color: black;
                 }
             }
-
         }
 
         .productSpec {
@@ -96,32 +99,16 @@ export default {
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            padding-bottom: 20px;
+            padding-bottom: 10px;
 
             h4 {
-                font-size: 30px;
+                font-size: 16px;
             }
 
             ins {
-                font-size: 20px;
+                font-size: 10px;
             }
         }
     }
-
-
-
-
 }
-
-//     .browseModalContainer {
-//         position: relative;
-//         top: 50%;
-//         left: 50%;
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-
-//         .browseModalButton {}
-//     }
-// }
 </style>

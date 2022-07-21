@@ -26,16 +26,14 @@ export default {
 <style lang="scss">
 .container {
   background-color: #EDEDED;
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
 
   .appCardContainer {
     height: 100%;
     width: 100%;
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-
 }
 </style>

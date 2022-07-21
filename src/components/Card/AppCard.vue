@@ -25,50 +25,19 @@ export default {
 
 </template>
 
-<style lang="scss">
+<style lang="scss" >
 .cardContainer {
     height: 100%;
     width: 100%;
+    overflow: auto;
 
     &:nth-of-type(1) {
         grid-area: 1 / 1 / span 2 / span 2;
-
-        img {
-            width: 40vh;
-        }
     }
 
     &:nth-of-type(10) {
-        grid-area: 3 / 3 / span 2 / span 2;
-
-        img {
-            width: 40vh;
-        }
+        grid-row: 7/span 2;
+        grid-column: 1/span 2;
     }
-
-
 }
-
-// .smallCard {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     flex-direction: column;
-
-//     .productImage {
-//         background-color: white;
-//     }
-
-//     .productSpec {
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-
-//         h4 {
-//             font-weight: 500;
-//             font-size: 20px;
-//         }
-//     }
-
-// }
 </style>

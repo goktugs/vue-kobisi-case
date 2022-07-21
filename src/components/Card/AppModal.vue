@@ -19,16 +19,14 @@ export default {
     <Transition name="modal">
         <div v-if="show" class="modal-mask">
             <div class="modal-container">
+                <div class="modalBigImage">
+                    <img :alt="name" :src="image" />
+                </div>
                 <div class="modalSmallImage">
                     <img :alt="name" :src="image" />
                     <img :alt="name" :src="image" />
                     <img :alt="name" :src="image" />
                 </div>
-
-                <div class="modalBigImage">
-                    <img :alt="name" :src="image" />
-                </div>
-
                 <div class="modalSpec">
                     <div>
                         <h4>{{ name }}</h4>
@@ -66,10 +64,10 @@ export default {
     transition: opacity 0.3s ease;
 
     .modal-container {
-        width: 1000px;
-        height: 50vh;
+        width: 400px;
+        height: 70vh;
         margin: 0px auto;
-        padding: 20px 30px;
+        padding: 10px 15px;
         background: #EDEDED;
         border-radius: 2px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
@@ -77,15 +75,22 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         position: relative;
 
+        .modalBigImage {
+            flex-grow: 2;
+        }
+
         .modalSmallImage {
-            height: 100%;
+            height: auto;
+            margin-bottom: 30px;
             flex-grow: 1;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: flex-start;
             gap: 20px;
+            width: 100%;
 
             & img {
                 width: 50px;
@@ -93,23 +98,21 @@ export default {
                 &:hover {
                     border: 1px solid black;
                     cursor: pointer;
+                    margin-bottom: -2px;
                 }
             }
         }
 
-        .modalBigImage {
-            flex-grow: 2;
-        }
+
 
         .modalSpec {
-            margin-top: 50px;
             height: 100%;
             flex-grow: 2;
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
             flex-direction: column;
-            gap: 20px;
+
 
             h4 {
                 font-size: 30px;
@@ -119,18 +122,22 @@ export default {
                 font-size: 15px;
             }
 
+            h5 {
+                margin-top: 20px;
+            }
+
             .modalPrice {
                 margin: 30px 0;
                 display: flex;
                 flex-direction: column;
 
                 del {
-                    font-size: 20px;
+                    font-size: 10px;
                     margin-bottom: 5px;
                 }
 
                 ins {
-                    font-size: 40px;
+                    font-size: 20px;
                 }
 
 
@@ -138,10 +145,15 @@ export default {
 
             .modalButtons {
                 display: flex;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
 
                 .addBasket {
                     background: #1A1F16;
-                    border-radius: 14px;
                     padding: 8px 24px;
                     gap: 8px;
                     font-family: 'Cabin';
@@ -149,9 +161,9 @@ export default {
                     font-weight: 500;
                     font-size: 13px;
                     color: #fff;
-                    width: 107px;
+                    width: 65%;
                     height: 40px;
-                    margin-left: 20px;
+
                     cursor: pointer;
                 }
             }

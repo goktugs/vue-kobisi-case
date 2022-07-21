@@ -48,17 +48,17 @@ export default {
 <style lang="scss">
 .addCounter {
     background: #1A1F16;
-    border-radius: 14px;
     padding: 8px 24px;
     gap: 8px;
     font-weight: 500;
     font-size: 13px;
     color: #fff;
-    width: 107px;
+    width: 35%;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+
 
     .minus {
         flex-grow: 1;
