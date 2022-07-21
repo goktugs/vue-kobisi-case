@@ -1,8 +1,16 @@
 <script>
+import AppCounter from "../Counter/AppCounter";
 
 export default {
     name: "AppCardItem",
-    props: ["image", "name", "newPrice", "oldPrice", "id", "show"],
+    props: ["image", "name", "newPrice", "oldPrice", "id", "show", "description"],
+    components: {
+        AppCounter
+    },
+    data() {
+        return {
+        }
+    },
 
 }
 </script>
@@ -12,32 +20,38 @@ export default {
         <div v-if="show" class="modal-mask">
             <div class="modal-container">
                 <div class="modalSmallImage">
-                    <img alt="name" src="image" />
-                    <img alt="name" src="image" />
-                    <img alt="name" src="image" />
+                    <img :alt="name" :src="image" />
+                    <img :alt="name" :src="image" />
+                    <img :alt="name" :src="image" />
                 </div>
 
                 <div class="modalBigImage">
-                    <img alt="name" src="image" />
-                </div>>
-
-                <div class="modalSpec">
-
-                    <h1>{{ name }}</h1>
-
-                    <!-- <slot name="footer">
-                        default footer
-                    
-                    </slot> -->
+                    <img :alt="name" :src="image" />
                 </div>
 
-                <button class="modal-default-button" @click="$emit('close')">OK</button>
+                <div class="modalSpec">
+                    <div>
+                        <h4>{{ name }}</h4>
+                        <h6>SKU:{{ id }}</h6>
+                    </div>
+                    <h5>{{ description }}</h5>
+                    <div class="modalPrice">
+                        <del>{{ oldPrice }}</del>
+                        <ins>{{ newPrice }}</ins>
+                    </div>
+                    <div class="modalButtons">
+                        <AppCounter />
+                        <button class="addBasket">To Basket</button>
+                    </div>
+                </div>
+
+                <button class="modalClose" @click="$emit('close')">X</button>
             </div>
         </div>
     </Transition>
 </template>
 
-<style scoped >
+<style lang="scss" >
 .modal-mask {
     position: fixed;
     z-index: 9998;
@@ -50,34 +64,112 @@ export default {
     align-items: center;
     justify-content: center;
     transition: opacity 0.3s ease;
-}
+
+    .modal-container {
+        width: 1000px;
+        height: 50vh;
+        margin: 0px auto;
+        padding: 20px 30px;
+        background: #EDEDED;
+        border-radius: 2px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .modalSmallImage {
+            height: 100%;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+
+            & img {
+                width: 50px;
+
+                &:hover {
+                    border: 1px solid black;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .modalBigImage {
+            flex-grow: 2;
+        }
+
+        .modalSpec {
+            margin-top: 50px;
+            height: 100%;
+            flex-grow: 2;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 20px;
+
+            h4 {
+                font-size: 30px;
+            }
+
+            h6 {
+                font-size: 15px;
+            }
+
+            .modalPrice {
+                margin: 30px 0;
+                display: flex;
+                flex-direction: column;
+
+                del {
+                    font-size: 20px;
+                    margin-bottom: 5px;
+                }
+
+                ins {
+                    font-size: 40px;
+                }
 
 
+            }
 
-.modal-container {
-    width: 1000px;
-    height: 50vh;
-    margin: 0px auto;
-    padding: 20px 30px;
-    background-color: #fff;
-    border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+            .modalButtons {
+                display: flex;
 
-.modal-header h3 {
-    margin-top: 0;
-    color: #42b983;
-}
+                .addBasket {
+                    background: #1A1F16;
+                    border-radius: 14px;
+                    padding: 8px 24px;
+                    gap: 8px;
+                    font-family: 'Cabin';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 13px;
+                    color: #fff;
+                    width: 107px;
+                    height: 40px;
+                    margin-left: 20px;
+                    cursor: pointer;
+                }
+            }
 
-.modal-body {
-    margin: 20px 0;
-}
 
-.modal-default-button {
-    float: right;
+        }
+
+        .modalClose {
+            position: absolute;
+            top: 0;
+            right: 0%;
+            margin: 10px 10px 0 0;
+            background-color: #1A1F16;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
 }
 </style>

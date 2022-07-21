@@ -25,7 +25,7 @@ export default {
 
 <style lang="scss">
 .container {
-  background-color: red;
+  background-color: #EDEDED;
   max-width: 1400px;
   margin: 0 auto;
 
@@ -36,5 +36,6 @@ export default {
     gap: 10px;
     grid-template-columns: repeat(4, 1fr);
   }
+
 }
 </style>
