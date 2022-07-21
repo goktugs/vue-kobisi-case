@@ -26,7 +26,7 @@ export default {
 </template>
 
 <style lang="scss" >
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
     .cardContainer {
         height: 100%;
         width: 100%;
@@ -34,22 +34,29 @@ export default {
         &:nth-of-type(1) {
             grid-area: 1 / 1 / span 2 / span 2;
 
-            img {
-                width: 40vh;
+            .productImage {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
             }
         }
 
         &:nth-of-type(10) {
             grid-area: 3 / 3 / span 2 / span 2;
 
-            img {
-                width: 40vh;
+            .productImage {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
             }
+
         }
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
 
     .cardContainer {
         height: 100%;

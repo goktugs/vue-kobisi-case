@@ -12,6 +12,7 @@ export default {
         }
     },
 
+
 }
 </script>
 
@@ -50,7 +51,7 @@ export default {
 </template>
 
 <style lang="scss" >
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
     .modal-mask {
         position: fixed;
         z-index: 9998;
@@ -172,7 +173,7 @@ export default {
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
     .modal-mask {
         position: fixed;
         z-index: 9998;
@@ -188,7 +189,7 @@ export default {
 
         .modal-container {
             width: 400px;
-            height: 70vh;
+            height: 80%;
             margin: 0px auto;
             padding: 10px 15px;
             background: #EDEDED;
@@ -200,7 +201,7 @@ export default {
             justify-content: center;
             flex-direction: column;
             position: relative;
-            overflow-y: auto;
+            overflow-y: none;
 
             .modalBigImage {
                 flex-grow: 2;

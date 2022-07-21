@@ -24,7 +24,7 @@ export default {
 
 
 <style lang="scss">
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
   .container {
     background-color: #EDEDED;
     max-width: 1400px;
@@ -40,7 +40,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
   .container {
     background-color: #EDEDED;
     width: 100%;
