@@ -20,7 +20,7 @@ export default {
 
     <div v-for="product in products" :key="product.id" class="cardContainer">
         <AppCardItem :image="product.image" :name="product.name" :newPrice="product.newPrice"
-            :oldPrice="product.oldPrice" :id="product.id" />
+            :oldPrice="product.oldPrice" :id="product.id" :description="product.description" />
     </div>
 
 </template>
@@ -29,11 +29,24 @@ export default {
 .cardContainer {
     height: 100%;
     width: 100%;
-    border: 1px solid black;
 
     &:nth-of-type(1) {
         grid-area: 1 / 1 / span 2 / span 2;
+
+        img {
+            width: 40vh;
+        }
     }
+
+    &:nth-of-type(10) {
+        grid-area: 3 / 3 / span 2 / span 2;
+
+        img {
+            width: 40vh;
+        }
+    }
+
+
 }
 
 // .smallCard {
