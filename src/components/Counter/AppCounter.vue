@@ -4,10 +4,10 @@
         <div class="minus" @click="mpminus()">-</div>
 
 
-        <input type="number" v-model="newValue" disabled />
+        <input type="number" v-model="newValue" disabled id="#input" />
 
 
-        <div class="plus" @click="mpplus()">+</div>
+        <div class="plus" id="#plus" @click="mpplus()">+</div>
     </div>
 </template>
 
