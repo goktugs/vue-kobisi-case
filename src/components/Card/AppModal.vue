@@ -79,6 +79,12 @@ export default {
             justify-content: center;
             position: relative;
 
+            &:hover {
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            }
+
+
+
             .modalSmallImage {
                 height: 100%;
                 flex-grow: 1;
@@ -173,7 +179,7 @@ export default {
     }
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 600px) {
     .modal-mask {
         position: fixed;
         z-index: 9998;
@@ -189,7 +195,161 @@ export default {
 
         .modal-container {
             width: 400px;
-            height: 80%;
+            height: 85%;
+            margin: 0px auto;
+            padding: 10px 15px;
+            background: #EDEDED;
+            border-radius: 2px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            overflow-y: none;
+
+            .modalBigImage {
+                flex-grow: 2;
+                width: 100%;
+                object-fit: cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    max-width: 50%;
+                    height: auto;
+                }
+
+            }
+
+            .modalSmallImage {
+                height: auto;
+                margin-bottom: 1em;
+                margin-top: 1em;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 20px;
+                width: 100%;
+
+                & img {
+                    width: 15%;
+
+                    &:hover {
+                        border: 1px solid black;
+                        cursor: pointer;
+                        margin-bottom: -2px;
+                    }
+                }
+            }
+
+
+
+            .modalSpec {
+                height: 100%;
+                flex-grow: 2;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+
+
+                h4 {
+                    font-size: 8vw;
+                }
+
+                h6 {
+                    font-size: 4vw;
+                }
+
+                h5 {
+                    margin-top: 20px;
+                    font-size: 3vw;
+
+                }
+
+                .modalPrice {
+                    margin: 1.5em 0;
+                    display: flex;
+                    flex-direction: column;
+
+                    del {
+                        font-size: 3vw;
+                        margin-bottom: 5px;
+                    }
+
+                    ins {
+                        font-size: 6vw;
+                    }
+
+
+                }
+
+                .modalButtons {
+                    display: flex;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+
+                    .addBasket {
+                        background: #1A1F16;
+                        padding: 8px 24px;
+                        gap: 8px;
+                        font-family: 'Cabin';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 13px;
+                        color: #fff;
+                        width: 65%;
+                        height: 40px;
+
+                        cursor: pointer;
+                    }
+                }
+
+
+            }
+
+            .modalClose {
+                position: absolute;
+                top: 0;
+                right: 0%;
+                margin: 10px 10px 0 0;
+                background-color: #1A1F16;
+                color: white;
+                padding: 5px;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+
+
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1280px) {
+    .modal-mask {
+        position: fixed;
+        z-index: 9998;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.3s ease;
+
+        .modal-container {
+            width: 400px;
+            height: 85%;
             margin: 0px auto;
             padding: 10px 15px;
             background: #EDEDED;
@@ -208,14 +368,12 @@ export default {
             }
 
             .modalSmallImage {
-                height: auto;
-                margin-bottom: 30px;
-                flex-grow: 1;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                gap: 20px;
+                flex-grow: 2;
                 width: 100%;
+                object-fit: cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
                 & img {
                     width: 50px;
