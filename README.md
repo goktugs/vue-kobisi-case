@@ -1,8 +1,19 @@
 # vue-kobisi-case
+Projeye https://vue-kobisi-case.vercel.app/ linkinden ulaşılabilir.
 
-https://vue-kobisi-case.vercel.app/
+Aynı zamanda jest ile küçük bir test yazdım. Modallar açılıyormu diye kontrol etmek için.
 
+Çalıştırmak için
 
+```
+yarn install
+```
+
+ardından
+
+```
+yarn test:unit
+```
 
 ## Project setup
 ```
