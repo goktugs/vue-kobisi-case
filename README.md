@@ -1,4 +1,7 @@
 # vue-kobisi-case
+
+!!! PROJEDE OVERENGINEERING OLMAMASI ADINA SADECE İSTENİLENİ YAPTIĞIM BRANCHİ AYIRDIM. MASTER BRANCH'TE PROJEYİ GELİŞTİRMEYE DEVAM EDİYORUM.
+
 Projeye https://vue-kobisi-case.vercel.app/ linkinden ulaşılabilir.
 
 Aynı zamanda jest ile küçük bir test yazdım. Modallar açılıyormu diye kontrol etmek için.
@@ -10,6 +13,13 @@ yarn install
 ```
 
 ardından
+
+```
+yarn serve
+```
+
+Test için
+
 
 ```
 yarn test:unit
